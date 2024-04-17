@@ -35,18 +35,18 @@ if __name__ == '__main__':
 	choice = ''
 
 	option_methods = {
-			1: Paciente.create,
-			2: Paciente.read,
-			3: Paciente.update,
-			4: Paciente.delete,
-			5: Procedimento.create,
-			6: Procedimento.read,
-			7: Procedimento.update,
-			8: Procedimento.delete,
-			9: Consulta.create,
-			10: Consulta.read,
-			11: Consulta.update,
-			12: Consulta.delete
+			1: Paciente().create,
+			2: Paciente().read,
+			3: Paciente().update,
+			4: Paciente().delete,
+			5: Procedimento().create,
+			6: Procedimento().read,
+			7: Procedimento().update,
+			8: Procedimento().delete,
+			9: Consulta().create,
+			10: Consulta().read,
+			11: Consulta().update,
+			12: Consulta().delete
 		}
 
 	while choice != '13':

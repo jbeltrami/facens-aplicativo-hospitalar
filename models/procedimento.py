@@ -2,7 +2,7 @@ from utils.utils import Utils
 from config.config import Config
 
 class Procedimento():
-	def __init__(self, nome):
+	def __init__(self, nome = None):
 		self.__nome = nome
 		self.__utils = Utils()
 		self.__config = Config()
