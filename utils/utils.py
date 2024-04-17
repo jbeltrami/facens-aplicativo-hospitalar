@@ -1,4 +1,5 @@
 import pandas as pd
+from config.config import Config
 
 
 class Utils():
@@ -9,7 +10,7 @@ class Utils():
 		pass
 
 	def read_data(self, path):
-		return pd.read_csv(path)
+		return pd.read_json(path)
 
 	def update_data(self, data, path):
 		pass

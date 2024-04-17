@@ -1,6 +1,6 @@
-import models.paciente as paciente
-import models.procedimento as procedimento
-import models.consulta as consulta
+from models.paciente import Paciente
+from models.procedimento import Procedimento
+from models.consulta import Consulta
 
 class Iniciar():
 	def show_menu(self):
@@ -35,18 +35,18 @@ if __name__ == '__main__':
 	choice = ''
 
 	option_methods = {
-			1: paciente.Paciente.create,
-			2: paciente.Paciente.read,
-			3: paciente.Paciente.update,
-			4: paciente.Paciente.delete,
-			5: procedimento.Procedimento.create,
-			6: procedimento.Procedimento.read,
-			7: procedimento.Procedimento.update,
-			8: procedimento.Procedimento.delete,
-			9: consulta.Consulta.create,
-			10: consulta.Consulta.read,
-			11: consulta.Consulta.update,
-			12: consulta.Consulta.delete
+			1: Paciente.create,
+			2: Paciente.read,
+			3: Paciente.update,
+			4: Paciente.delete,
+			5: Procedimento.create,
+			6: Procedimento.read,
+			7: Procedimento.update,
+			8: Procedimento.delete,
+			9: Consulta.create,
+			10: Consulta.read,
+			11: Consulta.update,
+			12: Consulta.delete
 		}
 
 	while choice != '13':
