@@ -1,4 +1,5 @@
-from utils.utils import Utils
+import pandas as pd
+from config.config import Config
 
 class Paciente():
 	def __init__(self, nome = None, idade = None, genero = None):
@@ -11,8 +12,7 @@ class Paciente():
 		pass
 
 	def read(self):
-		# Código para ler um paciente no banco de dados
-		pass
+		print(pd.read_json(Config().config_paciente))
 
 	def update(self):
 		# Código para atualizar um paciente no banco de dados
