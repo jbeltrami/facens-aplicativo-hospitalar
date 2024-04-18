@@ -1,5 +1,5 @@
 class Consulta():
-	def __init__(self, nome, data, procedimentos=[]):
+	def __init__(self, nome = None, data = None, procedimentos=[]):
 		self.__nome = nome
 		self.__data = data
 		self.__procedimentos = procedimentos

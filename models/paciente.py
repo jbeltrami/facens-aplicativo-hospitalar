@@ -1,7 +1,7 @@
 from utils.utils import Utils
 
 class Paciente():
-	def __init__(self, nome, idade, genero):
+	def __init__(self, nome = None, idade = None, genero = None):
 		self.__nome = nome
 		self.__idade = idade
 		self.__genero = genero
