@@ -85,7 +85,6 @@ class Paciente():
 
 
 		# print(pacientes.loc[linha_do_paciente])
-		print(pacientes)
 		self.__utils.update_data(pacientes, Config().config_paciente)
 
 
