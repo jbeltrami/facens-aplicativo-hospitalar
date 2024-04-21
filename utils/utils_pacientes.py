@@ -11,14 +11,13 @@ class Utils_Paciente():
 		df = pd.concat([df, data])
 
 		# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_json.html
-
 		return df.to_json(self.__config.config_paciente, orient="records")
 
 	def read_data(self, path):
 		return pd.read_json(self.__config.config_paciente)
 
 	def update_data(self, data, path):
-		pass
+		return data.to_json(self.__config.config_paciente, orient="records")
 
 	def delete_data(self, data, path):
 		pass
