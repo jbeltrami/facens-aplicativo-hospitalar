@@ -89,8 +89,15 @@ class Paciente():
 
 
 	def delete(self):
-		# Código para deletar um paciente no banco de dados
-		pass
+		# Ler lista de pacientes
+		pacientes = self.__utils.read_data(Config().config_paciente)
+		print(pacientes)
+		linha_do_paciente = int(input('Escolha o numero do paciente que deseja deletar da lista acima: '))
+
+		lista_atualizada = pacientes.drop(linha_do_paciente)
+
+		# print(lista_atualizada)
+		self.__utils.delete_data(lista_atualizada, Config().config_paciente)
 
 # Verificar se o paciente existe antes de incluir no bd
 

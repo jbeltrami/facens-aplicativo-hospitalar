@@ -20,4 +20,4 @@ class Utils_Paciente():
 		return data.to_json(self.__config.config_paciente, orient="records")
 
 	def delete_data(self, data, path):
-		pass
+		return data.to_json(self.__config.config_paciente, orient="records")
