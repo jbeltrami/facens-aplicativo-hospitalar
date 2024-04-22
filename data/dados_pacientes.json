@@ -1,1 +1,257 @@
-[{"nome":"Richard Ochoa","idade":66,"genero":"Masculino"},{"nome":"Kaitlyn Nguyen","idade":31,"genero":"Masculino"},{"nome":"Karl Hicks","idade":57,"genero":"Feminino"},{"nome":"Juan Schwartz","idade":26,"genero":"Feminino"},{"nome":"Eric Friedman","idade":80,"genero":"Feminino"},{"nome":"Kimberly Lee DVM","idade":35,"genero":"Feminino"},{"nome":"Lisa Clements","idade":26,"genero":"Masculino"},{"nome":"Heidi Phillips","idade":52,"genero":"Masculino"},{"nome":"James Zimmerman","idade":65,"genero":"Feminino"},{"nome":"Nancy Munoz","idade":79,"genero":"Masculino"},{"nome":"Margaret Hall","idade":73,"genero":"Feminino"},{"nome":"Carlos Villanueva","idade":30,"genero":"Masculino"},{"nome":"Donald Davis","idade":45,"genero":"Masculino"},{"nome":"Benjamin Miller","idade":34,"genero":"Masculino"},{"nome":"Rhonda Hernandez","idade":79,"genero":"Masculino"},{"nome":"Joanna Callahan","idade":40,"genero":"Masculino"},{"nome":"David Johnson","idade":53,"genero":"Masculino"},{"nome":"Lauren Woodward MD","idade":21,"genero":"Feminino"},{"nome":"Carl York","idade":26,"genero":"Masculino"},{"nome":"Kathryn Carrillo","idade":60,"genero":"Masculino"},{"nome":"Jacob Cannon","idade":48,"genero":"Masculino"},{"nome":"Antonio Sanchez","idade":62,"genero":"Masculino"},{"nome":"Lisa Atkinson","idade":41,"genero":"Masculino"},{"nome":"Kristina Gilmore","idade":78,"genero":"Masculino"},{"nome":"Lisa Simpson","idade":54,"genero":"Feminino"},{"nome":"Jonathan Myers","idade":36,"genero":"Masculino"},{"nome":"Tyler Costa","idade":42,"genero":"Feminino"},{"nome":"Susan Lin","idade":33,"genero":"Feminino"},{"nome":"Stephanie Gardner","idade":21,"genero":"Feminino"},{"nome":"Megan Hughes","idade":48,"genero":"Masculino"},{"nome":"Andrea Proctor","idade":73,"genero":"Feminino"},{"nome":"Kimberly Blair","idade":48,"genero":"Masculino"},{"nome":"Joanna James","idade":68,"genero":"Feminino"},{"nome":"Kelly Riddle","idade":45,"genero":"Masculino"},{"nome":"Ashley West","idade":38,"genero":"Masculino"},{"nome":"Dr. Emily Mitchell","idade":34,"genero":"Feminino"},{"nome":"Jessica Smith","idade":55,"genero":"Feminino"},{"nome":"William Gomez","idade":72,"genero":"Feminino"},{"nome":"Sharon Brown","idade":26,"genero":"Feminino"},{"nome":"Aimee Young","idade":44,"genero":"Feminino"},{"nome":"Lindsay Fry","idade":53,"genero":"Masculino"},{"nome":"Joann Perkins","idade":62,"genero":"Masculino"},{"nome":"Tammy Davis","idade":34,"genero":"Masculino"},{"nome":"Michelle Solomon","idade":57,"genero":"Feminino"},{"nome":"Eric Shaw","idade":68,"genero":"Feminino"},{"nome":"Rita Davis","idade":68,"genero":"Masculino"},{"nome":"Nicholas Dawson","idade":51,"genero":"Masculino"},{"nome":"Sarah Davis","idade":26,"genero":"Feminino"},{"nome":"Keith Guzman","idade":22,"genero":"Masculino"},{"nome":"Dwayne Melendez","idade":35,"genero":"Feminino"}]
+[
+    {
+        "nome": "Richard Ochoa",
+        "idade": 66,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Kaitlyn Nguyen",
+        "idade": 31,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Karl Hicks",
+        "idade": 57,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Juan Schwartz",
+        "idade": 26,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Eric Friedman",
+        "idade": 80,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Kimberly Lee DVM",
+        "idade": 35,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Lisa Clements",
+        "idade": 26,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Heidi Phillips",
+        "idade": 52,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "James Zimmerman",
+        "idade": 65,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Nancy Munoz",
+        "idade": 79,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Margaret Hall",
+        "idade": 73,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Carlos Villanueva",
+        "idade": 30,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Donald Davis",
+        "idade": 45,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Benjamin Miller",
+        "idade": 34,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Rhonda Hernandez",
+        "idade": 79,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Joanna Callahan",
+        "idade": 40,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "David Johnson",
+        "idade": 53,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Lauren Woodward MD",
+        "idade": 21,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Carl York",
+        "idade": 26,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Kathryn Carrillo",
+        "idade": 60,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Jacob Cannon",
+        "idade": 48,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Antonio Sanchez",
+        "idade": 62,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Lisa Atkinson",
+        "idade": 41,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Kristina Gilmore",
+        "idade": 78,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Lisa Simpson",
+        "idade": 54,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Jonathan Myers",
+        "idade": 36,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Tyler Costa",
+        "idade": 42,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Susan Lin",
+        "idade": 33,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Stephanie Gardner",
+        "idade": 21,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Megan Hughes",
+        "idade": 48,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Andrea Proctor",
+        "idade": 73,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Kimberly Blair",
+        "idade": 48,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Joanna James",
+        "idade": 68,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Kelly Riddle",
+        "idade": 45,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Ashley West",
+        "idade": 38,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Dr. Emily Mitchell",
+        "idade": 34,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Jessica Smith",
+        "idade": 55,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "William Gomez",
+        "idade": 72,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Sharon Brown",
+        "idade": 26,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Aimee Young",
+        "idade": 44,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Lindsay Fry",
+        "idade": 53,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Joann Perkins",
+        "idade": 62,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Tammy Davis",
+        "idade": 34,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Michelle Solomon",
+        "idade": 57,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Eric Shaw",
+        "idade": 68,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Rita Davis",
+        "idade": 68,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Nicholas Dawson",
+        "idade": 51,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Sarah Davis",
+        "idade": 26,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Keith Guzman",
+        "idade": 22,
+        "genero": "Masculino"
+    },
+    {
+        "nome": "Dwayne Melendez",
+        "idade": 35,
+        "genero": "Feminino"
+    },
+    {
+        "nome": "Marcelo",
+        "idade": "12",
+        "genero": "Feminino"
+    }
+]
