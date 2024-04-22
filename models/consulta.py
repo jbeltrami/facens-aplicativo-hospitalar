@@ -79,7 +79,7 @@ class Consulta():
 
 		input_atualizacao = int(input('Escolha o que deseja atualizar: 1 - Nome, 2 - Data, 3 - Procedimentos: '))
 
-		if input_atualizacao not in atualizacoes.keys:
+		if input_atualizacao not in atualizacoes.keys():
 			print("Opção inválida")
 			return
 
@@ -90,7 +90,7 @@ class Consulta():
 			if paciente.empty:
 				print("Paciente não encontrado")
 				return
-			lista_consultas.at[linha_da_consulta, atualizacoes[input_atualizacao]] = paciente["nome"]
+			lista_consultas.at[linha_da_consulta, atualizacoes[input_atualizacao]] = paciente["nome"].replace("[","").replace("]","")
 		elif input_atualizacao == 2:
 			input_data = input("Digite a data da consulta: ")
 			lista_consultas.at[linha_da_consulta, atualizacoes[input_atualizacao]] = input_data
@@ -100,14 +100,13 @@ class Consulta():
 			procedimentos_selecionados = procedimentos[(procedimentos["nome"].isin(input_procedimentos))]
 			if procedimentos_selecionados.empty:
 				print("Procedimento(s) não encontrado(s)")
-			pacientes.at[linha_da_consulta, atualizacoes[input_atualizacao]] = procedimentos_selecionados
+			lista_consultas.at[linha_da_consulta, atualizacoes[input_atualizacao]] = procedimentos_selecionados
 		
 		self.__utils.update_data(lista_consultas, Config().config_consulta)
 
 	def delete(self):
-		# Código para deletar uma consulta no banco de dados
-		pass
-
-
-# Verificar se o procedimento existe antes de ser inserido na consulta
-# Se nao existe, salvar o procedimento no banco de dados
+		lista_consultas = self.__utils.read_data(Config().config_consulta)
+		print(lista_consultas)
+		linha_da_consulta = int(input('Escolha o número da consulta que deseja deletar, na lista acima: '))
+		lista_atualizada = lista_consultas.drop(linha_da_consulta)
+		self.__utils.delete_data(lista_atualizada, Config().config_consulta)
