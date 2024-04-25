@@ -1,12 +1,1 @@
-[
-	{"nome" : "Consulta de rotina"},
-	{"nome" : "Exame de sangue"},
-	{"nome" : "Raio-X"},
-	{"nome" : "Eletrocardiograma"},
-	{"nome" : "Consulta de cardiologia"},
-	{"nome" : "Ultrassonografia"},
-	{"nome" : "Tomografia computadorizada"},
-	{"nome" : "Biopsia"},
-	{"nome" : "Endoscopia"},
-	{"nome" : "Colonoscopia"}
-]
+[{"nome":"Consulta de rotina"},{"nome":"Exame de sangue"},{"nome":"Raio-X"},{"nome":"Eletrocardiograma"},{"nome":"Consulta de cardiologia"},{"nome":"Ultrassonografia"},{"nome":"Tomografia computadorizada"},{"nome":"Biopsia"},{"nome":"Endoscopia"},{"nome":"Colonoscopia"},{"nome":"Vasectomia"}]

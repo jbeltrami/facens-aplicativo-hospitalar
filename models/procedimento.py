@@ -15,7 +15,6 @@ class Procedimento():
 		# Ler lista de procedimentos existente
 		procedimento = self.__utils.read_data(Config().config_procedimento)
 
-
 		if input_procedimento in procedimento['nome'].values:
 			print("Procedimento já cadastrado")
 			return False
@@ -23,10 +22,10 @@ class Procedimento():
 			novo_procedimento = pd.DataFrame( {
 				'nome': [input_procedimento]}
 			)
-
-		print(input_procedimento)
-		print(procedimento)
-
+#Conectar com Utils para suprir arquivo json base
+			self.__utils.create_data(novo_procedimento, Config().config_procedimento)
+			print("\nProcedimento cadastrado com sucesso")
+	
 
 		
 	def read(self):
