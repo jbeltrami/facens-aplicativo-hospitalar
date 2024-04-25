@@ -1,6 +1,7 @@
 import pandas as pd
 from config.config import Config
 from utils.utils_pacientes import Utils_Paciente
+from models.consulta import Consulta
 
 class Paciente():
 	def __init__(self, nome = None, idade = None, genero = None):
@@ -8,6 +9,7 @@ class Paciente():
 		self.__idade = idade
 		self.__genero = genero
 		self.__utils = Utils_Paciente()
+		self.__consulta = Consulta()
 
 	def verifica_genero(self, genero):
 		if genero == '1':
@@ -95,9 +97,8 @@ class Paciente():
 
 		paciente_removido = pacientes.loc[linha_do_paciente]
 		lista_atualizada = pacientes.drop(linha_do_paciente)
-
-		# print(lista_atualizada)
 		self.__utils.delete_data(lista_atualizada, paciente_removido, Config().config_paciente)
+		self.__consulta.delete_by_pacient(paciente_removido["nome"])
 
 # Verificar se o paciente existe antes de incluir no bd
 
