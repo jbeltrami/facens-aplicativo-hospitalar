@@ -83,9 +83,8 @@ class Paciente():
 
 		pacientes.at[linha_do_paciente, atualizacoes[input_atualizacao]] = novo_valor
 
-
 		# print(pacientes.loc[linha_do_paciente])
-		self.__utils.update_data(pacientes, Config().config_paciente)
+		self.__utils.update_data(pacientes, pacientes.loc[linha_do_paciente], Config().config_paciente)
 
 
 	def delete(self):
@@ -94,10 +93,11 @@ class Paciente():
 		print(pacientes)
 		linha_do_paciente = int(input('Escolha o numero do paciente que deseja deletar da lista acima: '))
 
+		paciente_removido = pacientes.loc[linha_do_paciente]
 		lista_atualizada = pacientes.drop(linha_do_paciente)
 
 		# print(lista_atualizada)
-		self.__utils.delete_data(lista_atualizada, Config().config_paciente)
+		self.__utils.delete_data(lista_atualizada, paciente_removido, Config().config_paciente)
 
 # Verificar se o paciente existe antes de incluir no bd
 

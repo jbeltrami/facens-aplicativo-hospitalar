@@ -1,6 +1,7 @@
 from models.paciente import Paciente
 from models.procedimento import Procedimento
 from models.consulta import Consulta
+from models.logs import Logs
 
 class Iniciar():
 	def show_menu(self):
@@ -20,11 +21,12 @@ class Iniciar():
 		print("10. Ver Consultas")
 		print("11. Atualizar Consulta")
 		print("12. Deletar Consulta")
-		print("13. Sair")
+		print("13. Ler Logs")
+		print("14. Sair")
 
 	def choose_option(self):
-		choice = input("Escolha uma opção [1-13]: ")
-		if choice not in ['1','2','3','4','5','6','7','8','9','10','11','12','13']:
+		choice = input("Escolha uma opção [1-14]: ")
+		if choice not in ['1','2','3','4','5','6','7','8','9','10','11','12','13','14']:
 			print("Opção inválida")
 			return False
 		else:
@@ -46,12 +48,14 @@ if __name__ == '__main__':
 			9: Consulta().create,
 			10: Consulta().read,
 			11: Consulta().update,
-			12: Consulta().delete
+			12: Consulta().delete,
+			13: Logs().read,
 		}
 
-	while choice != '13':
+	while choice != '14':
 		iniciar.show_menu()
 		choice = iniciar.choose_option()
-
-		if choice != '13':
+		try:
 			option_methods[int(choice)]()
+		except:
+			pass
