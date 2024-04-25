@@ -54,9 +54,16 @@ class Procedimento():
 
 	def delete(self):
 		# Código para deletar um procedimento no banco de dados
-		pass
-'''
-	{
-		'nome': 'nome_do_procedimento',
-	}
-'''
+		
+
+		# Ler lista de Procedimentos
+		procedimento = self.__utils.read_data(Config().config_procedimento)
+		print(procedimento)
+		linha_do_procedimento = int(input('Escolha o numero do procedimento que deseja deletar da lista acima: '))
+
+		lista_atualizada = procedimento.drop(linha_do_procedimento)
+
+		# print(lista_atualizada)
+		self.__utils.delete_data(lista_atualizada, Config().config_procedimento)
+		print(f'\n O Procedimento escolhido foi removido da base de dados')
+
