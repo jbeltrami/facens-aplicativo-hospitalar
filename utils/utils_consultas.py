@@ -9,9 +9,9 @@ class Utils_Consulta():
 		self.__config = Config()
 		self.__logs = Utils_Logs()
 
-	def create_data(self, data, path):
+	def create_data(self, created_data, path):
 		data = pd.read_json(self.__config.config_consulta)
-		data = pd.concat([data, data])
+		data = pd.concat([data, created_data])
 
 		log = pd.DataFrame(
 			{
