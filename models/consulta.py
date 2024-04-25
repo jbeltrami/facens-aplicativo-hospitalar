@@ -102,13 +102,14 @@ class Consulta():
 				print("Procedimento(s) não encontrado(s)")
 			lista_consultas.at[linha_da_consulta, atualizacoes[input_atualizacao]] = procedimentos_selecionados
 		
-		self.__utils.update_data(lista_consultas, Config().config_consulta)
+		self.__utils.update_data(lista_consultas, lista_consultas.loc[linha_da_consulta], Config().config_consulta)
 		print("\nConsulta atualizada com sucesso")
 
 	def delete(self):
 		lista_consultas = self.__utils.read_data(Config().config_consulta)
 		print(lista_consultas)
 		linha_da_consulta = int(input('Escolha o número da consulta que deseja deletar, na lista acima: '))
+		consulta_removida = lista_consultas.loc[linha_da_consulta]
 		lista_atualizada = lista_consultas.drop(linha_da_consulta)
-		self.__utils.delete_data(lista_atualizada, Config().config_consulta)
+		self.__utils.delete_data(lista_atualizada, consulta_removida, Config().config_consulta)
 		print("\nConsulta deletada com sucesso")

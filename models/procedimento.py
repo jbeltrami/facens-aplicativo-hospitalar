@@ -50,7 +50,7 @@ class Procedimento():
 		procedimento.at[linha_do_procedimento,"nome"] = input_atualizacao
 
 		#sobreescrever informação da lista de procedimentos
-		self.__utils.update_data(procedimento, Config().config_procedimento)
+		self.__utils.update_data(procedimento, procedimento.loc[linha_do_procedimento], Config().config_procedimento)
 
 	def delete(self):
 		# Código para deletar um procedimento no banco de dados
@@ -61,9 +61,10 @@ class Procedimento():
 		print(procedimento)
 		linha_do_procedimento = int(input('Escolha o numero do procedimento que deseja deletar da lista acima: '))
 
+		procedimento_removido = procedimento.loc[linha_do_procedimento]
 		lista_atualizada = procedimento.drop(linha_do_procedimento)
 
 		# print(lista_atualizada)
-		self.__utils.delete_data(lista_atualizada, Config().config_procedimento)
+		self.__utils.delete_data(lista_atualizada, procedimento_removido, Config().config_procedimento)
 		print(f'\n O Procedimento escolhido foi removido da base de dados')
 
