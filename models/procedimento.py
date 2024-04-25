@@ -1,12 +1,14 @@
 from utils.utils_procedimentos import Utils_Procedimento
 from config.config import Config
 import pandas as pd
+from models.consulta import Consulta
 
 class Procedimento():
 	def __init__(self, nome = None):
 		self.__nome = nome
 		self.__utils = Utils_Procedimento()
 		self.__config = Config()
+		self.__consulta = Consulta()
 
 	def create(self):
 		# Código para inserir um procedimento no banco de dados
@@ -64,7 +66,7 @@ class Procedimento():
 		procedimento_removido = procedimento.loc[linha_do_procedimento]
 		lista_atualizada = procedimento.drop(linha_do_procedimento)
 
-		# print(lista_atualizada)
 		self.__utils.delete_data(lista_atualizada, procedimento_removido, Config().config_procedimento)
+		self.__consulta.delete_by_procedure(procedimento_removido["nome"])
 		print(f'\n O Procedimento escolhido foi removido da base de dados')
 

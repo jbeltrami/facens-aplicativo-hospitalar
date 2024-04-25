@@ -9,9 +9,9 @@ class Utils_Consulta():
 		self.__config = Config()
 		self.__logs = Utils_Logs()
 
-	def create_data(self, data, path):
-		df = pd.read_json(self.__config.config_consulta)
-		df = pd.concat([df, data])
+	def create_data(self, created_data, path):
+		data = pd.read_json(self.__config.config_consulta)
+		data = pd.concat([data, created_data])
 
 		log = pd.DataFrame(
 			{
@@ -24,7 +24,7 @@ class Utils_Consulta():
 		self.__logs.create_data(log, self.__config.config_logs)
 
 		# https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_json.html
-		return df.to_json(self.__config.config_consulta, orient="records")
+		return self.save_data(data)
 
 	def read_data(self, path):
 		log = pd.DataFrame(
@@ -48,7 +48,7 @@ class Utils_Consulta():
 		)
 
 		self.__logs.create_data(log, self.__config.config_logs)
-		return data.to_json(self.__config.config_consulta, orient="records")
+		return self.save_data(data)
 
 	def delete_data(self, data, removed_data, path):
 		log = pd.DataFrame(
@@ -60,4 +60,7 @@ class Utils_Consulta():
 		)
 
 		self.__logs.create_data(log, self.__config.config_logs)
+		return self.save_data(data)
+
+	def save_data(self, data):
 		return data.to_json(self.__config.config_consulta, orient="records")

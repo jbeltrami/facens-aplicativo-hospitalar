@@ -3,6 +3,7 @@ from config.config import Config
 from utils.utils_consultas import Utils_Consulta
 from utils.utils_pacientes import Utils_Paciente
 from utils.utils_procedimentos import Utils_Procedimento
+import json
 
 '''
 	{
@@ -113,3 +114,24 @@ class Consulta():
 		lista_atualizada = lista_consultas.drop(linha_da_consulta)
 		self.__utils.delete_data(lista_atualizada, consulta_removida, Config().config_consulta)
 		print("\nConsulta deletada com sucesso")
+
+	def delete_by_pacient(self, pacient):
+		lista_consultas = self.__utils.read_data(Config().config_consulta)
+		lista_consultas = lista_consultas.drop(lista_consultas[(lista_consultas["nome"] == pacient)].index)
+		self.__utils.save_data(lista_consultas)
+
+	def delete_by_procedure(self, proc):
+		lista_consultas = self.__utils.read_data(Config().config_consulta)
+		indexes_to_drop = []
+		for i, procedures in enumerate(lista_consultas["procedimentos"]):
+			should_continue = False
+			for procedure in procedures:
+				if procedure["nome"] == proc:
+					indexes_to_drop.append(i)
+					should_continue = True
+					continue
+			if should_continue:
+				continue
+		lista_consultas = self.__utils.read_data(Config().config_consulta)
+		lista_consultas = lista_consultas.drop(index=indexes_to_drop)
+		self.__utils.save_data(lista_consultas)
